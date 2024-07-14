@@ -1,0 +1,178 @@
+#cua-registration-form, #cua-login-form, #cua-otp-section { 
+    background-color: #f9f9f9;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+#cua-registration-form, #cua-login-form, #cua-otp-section, #cua-message, #cua-login-message{   
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+#cua-registration-form .form-title, #cua-login-form .form-title, #cua-otp-section .form-title{
+    font-size: 2em;
+    text-align: center;
+}
+
+.cua-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cua-button:hover {
+    background-color: #45a049;
+}   
+
+#error, #success {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#error {
+    background-color: #f44336;
+    color: white;
+}
+
+#success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Additional styles for messages or other UI elements */
+#cua-message, #cua-login-message {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#cua-otp-section {
+    margin-top: 20px;
+}
+
+.success {
+    color: green;
+    background: #d5fed8;    
+    padding: 5px 0;
+}
+
+.error {
+    color: red;
+    background: #f5ebeb;
+    padding: 5px 0;
+}
+
+.smallFont{
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .cua-phone-input {
+        flex-wrap: wrap;
+    }
+
+    .cua-phone-input select {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
+    }
+
+    .cua-phone-input input[type="tel"] {
+        width: calc(50% - 5px);
+    }
+}
+
+/****************************************************************/
+
+.form {
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 30px;
+}
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: #333;
+    font-size: 0.8em;
+}
+
+
+.form :where(.input-box input, .select-box, textarea) {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd !important;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+#cua-registration-form textarea{
+    padding-top: 8px;
+    font-family: inherit;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.select-box {
+    margin-top: 28px;
+    background: #fff;
+}
+
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+
+.form button {
+    height: 45px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+}
+
+.form button:hover {
+    background: rgb(88, 56, 250);
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form .column .input-box {
+        margin-top: 20px;
+    }
+}
