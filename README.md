@@ -7,6 +7,7 @@ OTP Verification: Securely verify user email addresses using OTP sent to registe
 User Login: Enable users to login using their registered phone number.
 Dashboard Redirection: Automatically redirect users to the WordPress dashboard upon successful login.
 Customizable Styling: Easily customize button colors through the WordPress admin interface.
+
 Installation
 To install Custom User Authentication on your WordPress site, follow these steps:
 
@@ -31,7 +32,6 @@ Use shortcodes to add registration and login forms to your site:
 [cua_registration]: Renders the user registration form.
 [cua_login]: Renders the user login form.
 
-Customize Styling (Optional):
 User Registration Form
 To display the user registration form on a page or post, add the [cua_registration] shortcode.
 Example:
@@ -47,7 +47,7 @@ Upon successful registration, an OTP will be sent to the user's registered email
 Users must enter the OTP in the verification form to complete the registration process.
 
 Support
-For support or issues, please contact us at athelay.lwin@gmail.com or visit my GitHub repository for bug reports and feature requests.
+For support or issues, please contact at athelay.lwin@gmail.com or visit my GitHub repository for bug reports and feature requests.
 
 Contributing
 Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
