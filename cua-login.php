@@ -40,13 +40,19 @@ function cua_handle_login()
         if (!empty($user_query->get_results())) {
             $user = $user_query->get_results()[0];
 
-            // Log user in
-            wp_set_current_user($user->ID, $user->user_login);
-            wp_set_auth_cookie($user->ID);
-            do_action('wp_login', $user->user_login);
+            // Check if the user has verified their email
+            $verified = get_user_meta($user->ID, 'cua_verified', true);
+            if ($verified) {
+                // Log user in
+                wp_set_current_user($user->ID, $user->user_login);
+                wp_set_auth_cookie($user->ID);
+                do_action('wp_login', $user->user_login);
 
-            // Send JSON response with redirect URL
-            wp_send_json_success(array('message' => 'Login successful. Redirecting...', 'redirect_url' => admin_url('index.php')));
+                // Send JSON response with redirect URL
+                wp_send_json_success(array('message' => 'Login successful. Redirecting...', 'redirect_url' => admin_url('index.php')));
+            } else {
+                wp_send_json_error('Your email is not verified. Please check your email for the OTP and verify your account.');
+            }
         } else {
             wp_send_json_error('Phone number not found.');
         }

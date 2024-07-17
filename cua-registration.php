@@ -8,12 +8,10 @@ function cua_registration_form()
     <form id="cua-registration-form" action="" method="POST" class="form">
         <h2 class="form-title">Register</h2>
         <div class="input-box">
-            <!-- <label for="email">Email:</label> -->
             <input type="email" id="email" name="email" placeholder="Email" required>
         </div>
 
         <div class="input-box">
-            <!-- <label for="name">Name:</label> -->
             <input type="text" id="name" name="name" placeholder="Name" required>
         </div>
         
